@@ -41,7 +41,8 @@ print(green_hsv)
 
 
 # 1. Конвертация изображения в HSV (Hue - тон, Saturation - насыщенность, Value - значение
-image = cv2.imread('test_images/flower.png')
+image = cv2.imread('test_images/flower.jpeg')
+# image = cv2.imread('main_test_images/template1.png')
 hsv_img = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
 view_image(hsv_img)     # Вывод
 
@@ -72,14 +73,15 @@ view_image(image)
 
 
 # Чтобы получить центр контура
-cnt = contours[5]
-M = cv2.moments(cnt)
-cX = int(M["m10"] / M["m00"])
-cY = int(M["m01"] / M["m00"])
-largest_area, largest_contour_index = find_greatest_contour(contours)
+# cnt = contours[5]
+# M = cv2.moments(cnt)
+# cX = int(M["m10"] / M["m00"])
+# cY = int(M["m01"] / M["m00"])
+# largest_area, largest_contour_index = find_greatest_contour(contours)
+#
+# print(largest_area)
+# print(largest_contour_index)
+# print(len(contours))
+# print(cX)
+# print(cY)
 
-print(largest_area)
-print(largest_contour_index)
-print(len(contours))
-print(cX)
-print(cY)
