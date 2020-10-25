@@ -33,7 +33,7 @@ def find_greatest_contour(contours):
     return the_largest_area, the_largest_contour_index
 
 
-# 1. Конвертация изображения в HSV (Hue - тон, Saturation - насыщенность, Value - значение
+# 1. Конвертация изображения в HSV (Hue - тон, Saturation - насыщенность, Value - значение)
 image = cv2.imread('./images/toliatty.png')
 hsv_img = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
 view_image(hsv_img)     # Вывод
