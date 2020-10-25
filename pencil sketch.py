@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+# Программа, которая превращает любое изображение в карандашный набросок
 """
 Статья: https://www.freecodecamp.org/news/sketchify-turn-any-image-into-a-pencil-sketch-with-10-lines-of-code-cf67fa4f68ce/
 """
@@ -34,7 +35,7 @@ def dodge(front, back):
 
 
 # Для быстроты проведения тестов сделаем цилк, который будет прогонять все изображения по алгоритму
-dir_name = "/images"
+dir_name = "./images/"
 test = os.listdir(dir_name)
 
 s = 0
