@@ -3,8 +3,7 @@ import struct
 
 def convert_bmp(input_file, output_file, new_bit_count):
     if new_bit_count not in [1, 4, 8, 16, 24]:
-        print("Ошибка: Неподдерживаемое число бит на пиксел для нового формата.")
-        return
+        raise IndexError("Ошибка: Неподдерживаемое число бит на пиксел для нового формата.")
 
     with open(input_file, 'rb') as f_in:
         bmp_header = f_in.read(14)  # Читаем заголовок файла
@@ -37,6 +36,5 @@ def convert_bmp(input_file, output_file, new_bit_count):
                 f_out.write(b'\x00' * padding)
 
 
-# Пример использования
-input_bmp_str = '.\images\Airplane.bmp'
-convert_bmp(input_bmp_str, 'output.bmp', 8)  # Пример преобразования в 8-битное изображение
+if __name__ == '__main__':
+    convert_bmp('images/input/Airplane.bmp', 'output.bmp', 8)  # Пример преобразования в 8-битное изображение

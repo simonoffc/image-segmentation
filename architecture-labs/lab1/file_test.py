@@ -32,4 +32,4 @@ def test_bmp_file(filename):
 
 
 if __name__ == '__main__':
-    test_bmp_file('images\\Airplane.bmp')
+    test_bmp_file('images/input/Airplane.bmp')
