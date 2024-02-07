@@ -35,7 +35,7 @@ def dodge(front, back):
 
 
 # Для быстроты проведения тестов сделаем цилк, который будет прогонять все изображения по алгоритму
-dir_name = "./images/"
+dir_name = "../images/"
 test = os.listdir(dir_name)
 
 s = 0
